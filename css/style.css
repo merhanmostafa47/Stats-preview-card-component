@@ -68,8 +68,7 @@ main {
     top: 0;
     left: 0;
     z-index: 1;
-    background: var(--accent);
-    mix-blend-mode: multiply;
+    background: rgb(170 92 219 / 60%);
 }
 
 .card__image {
@@ -77,9 +76,9 @@ main {
     height: 100%;
 }
 
-.card__image::after {   
+/* .card__image::after {   
     filter: grayscale() brightness(110%); 
-}
+} */
 
 /* End card aside */
 
@@ -104,8 +103,7 @@ main {
     color: var(--paragraph-color);
     font-family: 'regular';
     line-height: 1.6;
-    margin-block-end: 4.375rem;
-    width: 95%;
+    margin-block-end: 4.6875rem;
 }
 
 .card__stats {
@@ -162,7 +160,7 @@ main {
     }
 
     .card__copy {
-        
+        width: 95%;
         margin-block-end: 30px;
     }
 
