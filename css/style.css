@@ -1,0 +1,178 @@
+/* Fonts */
+@font-face {
+    font-family: 'Bold';
+    src: url(../fonts/Inter-Bold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url(../fonts/Inter-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url(../fonts/LexendDeca-Regular.ttf);
+    font-display: swap;
+}
+
+/* General rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root {
+    --main-background: #090b1a;
+    --card-backgrpund: #1b1938;
+    --accent: #aa5cdb;
+    --main-heading-color: #fff;
+    --paragraph-color: #ffffffbf;
+    --state-headings-color: #fff9;
+}
+
+/* Start main */
+main {
+    min-height: 100vh;
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-backgrpund);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Start card aside */
+
+.card__aside {
+    width: 50%;
+    position: relative;
+}
+
+.card__aside::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: var(--accent);
+    mix-blend-mode: multiply;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+}
+
+.card__image::after {   
+    filter: grayscale() brightness(110%); 
+}
+
+/* End card aside */
+
+/* Start card body */
+.card__body {
+    width: 50%;
+    padding: 4.375rem;
+}
+
+.card__title {
+    color: var(--main-heading-color);
+    font-family: 'Bold';
+    margin-block-end: 25px;
+}
+
+.card__title--accent {
+    color: var(--accent);
+}
+
+.card__copy {
+    font-size: 0.9375rem;
+    color: var(--paragraph-color);
+    font-family: 'regular';
+    line-height: 1.6;
+    margin-block-end: 4.375rem;
+    width: 95%;
+}
+
+.card__stats {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.state {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.number {
+    font-size: 1.375rem;
+    font-family: 'Bold';
+    color: var(--main-heading-color);
+    margin-block-end: 5px;
+}
+
+.name {
+    font-size: 0.75rem;
+    font-family: 'regular';
+    color: var(--state-headings-color);
+
+}
+
+/* End card body */
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column-reverse;
+        margin: 5rem 1.25rem;
+    }
+
+    .card,
+    .card__aside,
+    .card__body,
+    .card__stats {
+        width: 100%;
+    }
+
+    .card__body {
+        padding: 1.5625rem;
+        text-align: center;
+    }
+
+    .card__title {
+        font-size: 1.8rem;
+        margin-block-end: 15px;
+    }
+
+    .card__copy {
+        
+        margin-block-end: 30px;
+    }
+
+    .card__stats {
+        flex-direction: column;
+    }
+
+    .state {
+        margin-block-end: 20px;
+    }
+}
+
+/* Start main */
