@@ -68,7 +68,8 @@ main {
     top: 0;
     left: 0;
     z-index: 1;
-    background: rgb(170 92 219 / 60%);
+    background: rgb(170 92 219 / 50%);
+    ilter: saturate(1.5);
 }
 
 .card__image {
