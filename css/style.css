@@ -35,6 +35,7 @@
 }
 
 /* Start main */
+
 main {
     min-height: 100vh;
     background-color: var(--main-background);
@@ -77,13 +78,10 @@ main {
     height: 100%;
 }
 
-/* .card__image::after {   
-    filter: grayscale() brightness(110%); 
-} */
-
 /* End card aside */
 
 /* Start card body */
+
 .card__body {
     width: 50%;
     padding: 4.375rem;
@@ -137,7 +135,7 @@ main {
 
 /* End card body */
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .card {
         flex-direction: column-reverse;
         margin: 5rem 1.25rem;
@@ -174,4 +172,4 @@ main {
     }
 }
 
-/* Start main */
+/* End main */
